@@ -1,5 +1,7 @@
 # Glory of the Garden
+
 **Topic:** Digital Forensics
+
 **Clue:** This garden contains more than it seems.
 
 This challenge involves downloading a file. This file is a jpg file called garden.jpg. Upon opening the image a garden appears and nothing seems suspicous.
