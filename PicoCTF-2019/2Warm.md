@@ -1,5 +1,7 @@
 # 2warm challenge
+
 **Topic:** General skills
+
 **Clue:** Can you convert the number 42 (base 10) to binary (base 2)?
 
 This is a simple challenge that requires the use of 2's complement. Binary is compromised of 1's and 0's. In binary, each "place" represents a number to the power of two.
