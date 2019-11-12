@@ -12,7 +12,7 @@ Using curl requests, a request was submitted passing in the current guess each t
 
 The program would continue running until the pin had been found.
 
-*Required Information*
+**Required Information**
 
   1. The timeout of the firewall
   2. The users PHPSESSID
