@@ -1,4 +1,4 @@
-# 2warm challenge
+# 2warm 
 
 **Topic:** General skills
 
