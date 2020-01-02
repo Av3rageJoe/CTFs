@@ -6,7 +6,7 @@ This CTF contained four flags for the user to find.
 
 Initially, as with any CTF, the structure of the website was examined. Once this was done, a new page was created. From examining the URL, it could be seen that page had been given the ID "6". Another new page was then created and it was given the ID 7. This led to the conclusion that the pages were given ID's sequentially.
 
-For testing pruposes, the url "http://34.94.3.143/6874967a31/page/8" was then navigated to, to see if it existed. However, a 404 response was received.
+For testing purposes, the url "http://34.94.3.143/6874967a31/page/8" was then navigated to, to see if it existed. However, a 404 response was received.
 
 In order to test what URLs existed, a quick bash script was created. The script makes a curl request for all pages from 0 to 100. If the response is not a 404 code, then the URL is appended to a text file containing valid URLs. The script is shown below.
 
@@ -34,3 +34,11 @@ Therefore, the edit link for a valid page was obtained, and the page number was 
 To find the second flag, it involved tampering input to try and produce an unexpected output. By modifying the page domain in the URL of the edit pages section of the website, the flag can be seen.
 
 An apostrophe was appended at the end to create the URL "http://34.94.3.143/d7852a1133/page/edit/6'". 
+
+### Flag 2
+
+The third flag was found by injecting some XSS into the web page. By observing the pages created, it could be seen that the title is stored on two pages: The main page and each individual directory. By adding the code `<img src = x onerror=alert(1)>` to the title section when creating a new page, the script is fired when the homepage is navigated to. However, this alert gives the flag, rather than the alert message. 
+
+### Flag 3
+
+Knowing that the third flag involved using XSS, another form of XSS was used for this flag. In one of the input fields when creating a page, the text `" onload=alert(1)>` was entered, and the flag appeared. 
