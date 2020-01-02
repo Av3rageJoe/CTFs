@@ -8,7 +8,7 @@ The first flag was found by tampering the data sent to the server. An attempt to
 
 !['The intercepted packet for the checkout request'](https://github.com/Av3rageJoe/CTFs/blob/master/HackerOneCTFs/Images/Screenshot%202020-01-02%20at%2022.42.33.png)
 
-It was noticed in this request, a parameter called *'cart'*  was sent with soem URL encoded input. This input was decrypted using CyberChef, and the output can result can be seen below.
+It was noticed in this request, a parameter called *'cart'*  was sent with some URL encoded input. This input was decrypted using CyberChef, and the output can result can be seen below.
 
 !['Decoded cart parameter'](https://github.com/Av3rageJoe/CTFs/blob/master/HackerOneCTFs/Images/Screenshot%202020-01-02%20at%2022.46.07.png)
 
