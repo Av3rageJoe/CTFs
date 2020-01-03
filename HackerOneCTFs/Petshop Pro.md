@@ -44,13 +44,21 @@ Once the parameters were found, the hydra script was ready to be created. The fu
 An explanation of the syntax for the above command can be found below.
 
   `-L   :    The uusername list to test`
+  
   `-p   :    The password to use in the requests`
+  
   `34.74.105.127   :   The root domain name`
+  
   `http-post-form  :   Specifies to use the HTTP POST method`
+  
   `"/39580748ad/login:username=^USER^&password=^PASS^:Invalid username"  :   "/Path/to/login/page:<parameters to submit in the post request: The error message displayed"`
+  
   `^USER^   :   Where the command should place the usernames in the username list`
+  
   `^PASS^   :   Where the command should place the password`
+  
   `-I   :   Begin from where left off, if the command was recently stopped`
+  
   `-t   :   The number of theads to use`
 
 
