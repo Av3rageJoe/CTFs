@@ -31,7 +31,7 @@ do
 done </Path/to/Directory/Wordlist
 ```
 
-This script returned that a webpage called /login was found. When navigated to, it was found that this contained a login for the admin user. Some default admin passwords were tested (admin:admin, admin:password etc) however these did not provide any results. It was noticed during these attempts that the webpage was displaying saying that the username was invalid. This led to the thought process that username enumeration was possible. Another bash script was created that would test common usernames, and return the correct username when found.
+This script returned that a webpage called /login was found. When navigated too, it was found that this contained a login for the admin user. Some default admin passwords were tested (admin:admin, admin:password etc) however these did not provide any results. It was noticed during these attempts that the webpage was displaying saying that the username was invalid. This led to the thought process that username enumeration was possible. Another bash script was created that would test common usernames, and return the correct username when found.
 
 To try and find the username, the program hydra was used. In order to use hydra, the parameters that the program passes need to be captured, along with the error message that the web page displays. To find the parameters, Owasp-Zap was used to capture a request.
 
@@ -43,7 +43,7 @@ Once the parameters were found, the hydra script was ready to be created. The fu
 
 An explanation of the syntax for the above command can be found below.
 
-  `-L   :    The uusername list to test`
+  `-L   :    The username list to test`
   
   `-p   :    The password to use in the requests`
   
@@ -59,7 +59,7 @@ An explanation of the syntax for the above command can be found below.
   
   `-I   :   Begin from where left off, if the command was recently stopped`
   
-  `-t   :   The number of theads to use`
+  `-t   :   The number of threads to use`
 
 Once this command had finished running, it was found that the username was *carmelina*.
 
@@ -77,4 +77,4 @@ Once logged in, the flag displayed itself.
 
 ### Flag 2
 
-Once logged in, it is possible to edit the items for sale. This presents a possibility for XSS if the input is not correctly sanitised. Therefore, systematically in each field the syntax *<img src='x' onerror=alert(1)>* was entered. This foudn that once the homepage was navigated to, the alert message was fired when the command was injected into the name field.
+Once logged in, it is possible to edit the items for sale. This presents a possibility for XSS if the input is not correctly sanitised. Therefore, systematically in each field the syntax `*<img src='x' onerror=alert(1)>*` was entered. This found that once the homepage was navigated to, the alert message was fired when the command was injected into the name field.
