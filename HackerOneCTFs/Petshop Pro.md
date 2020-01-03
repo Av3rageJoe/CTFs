@@ -61,5 +61,20 @@ An explanation of the syntax for the above command can be found below.
   
   `-t   :   The number of theads to use`
 
+Once this command had finished running, it was found that the username was *carmelina*.
 
+!['hydra finding the username'](https://github.com/Av3rageJoe/CTFs/blob/master/HackerOneCTFs/Images/Screenshot%202020-01-03%20at%2019.38.22.png)
 
+Once the username was found, the password needed to be found. To do this, a very similar command was used as previously except for the fact that the username was set to carmelina, and the password made use of a password list. This request can be seen below. 
+
+!['hydra command to find the password'](https://github.com/Av3rageJoe/CTFs/blob/master/HackerOneCTFs/Images/Screenshot%202020-01-03%20at%2020.03.39.png)
+
+Hydra then successfully found the password to be *diane*.
+
+!['hydra finding the password'](https://github.com/Av3rageJoe/CTFs/blob/master/HackerOneCTFs/Images/Screenshot%202020-01-03%20at%2020.05.10.png)
+
+Once logged in, the flag displayed itself.
+
+### Flag 2
+
+Once logged in, it is possible to edit the items for sale. This presents a possibility for XSS if the input is not correctly sanitised. Therefore, systematically in each field the syntax *<img src='x' onerror=alert(1)>* was entered. This foudn that once the homepage was navigated to, the alert message was fired when the command was injected into the name field.
