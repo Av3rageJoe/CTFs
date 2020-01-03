@@ -77,4 +77,4 @@ Once logged in, the flag displayed itself.
 
 ### Flag 2
 
-Once logged in, it is possible to edit the items for sale. This presents a possibility for XSS if the input is not correctly sanitised. Therefore, systematically in each field the syntax `<img src='x' onerror=alert(1)>` was entered. This found that once the homepage was navigated to, the alert message was fired when the command was injected into the name field.
+Once logged in, it is possible to edit the items for sale. This presents a possibility for XSS if the input is not correctly sanitised. Therefore, systematically in each field the syntax `<img src='x' onerror=alert(1)>` was entered. This found that  if the script was injected into the name field then the alert would fire once the checkout page was navigated to, and reveal the flag.
