@@ -20,7 +20,7 @@ First of all, the wordlist was extracted from it's .gz format using `gzip -d /us
 
 Once the file was unlocked, the following contents were revealed:
 
-![]()
+![](https://github.com/Av3rageJoe/CTFs/blob/master/HTB/Images/Screenshot%202020-02-15%20at%2013.26.14.png)
 
 Now, if you look closely at the bottom of the photo, some text appears in very small writing. Upon enhancing on the text, it appears to look like morse code. 
 
